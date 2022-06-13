@@ -1,0 +1,13 @@
+<div class="jumbotron p-3 mb-2 bg-secondary text-white">
+  <h1 class="display-4"><%= @fighter.first_name %> <%= @fighter.last_name %> </h1>
+  <p class="lead"><%= @fighter.rank %>, <%= @fighter.style %> fighter. </p>
+  <hr class="my-4">
+  <p>Started at  <%= @fighter.start_date %></p>
+  <p>Notes: <%= @fighter.notes %> </p>
+  <p>Last payment: <%= @fighter.last_payment %></p>
+  <br>
+  <%= link_to 'Edit', edit_fighter_path(@fighter), class:"btn btn-light" %> 
+  <%= link_to 'Back', fighters_path, class:"btn btn-dark" %>
+  <%= link_to 'Destroy', @fighter, method: :delete, data: { confirm: 'Are you sure?' },  type:"button", class:"btn btn-danger" %>
+</div>
+

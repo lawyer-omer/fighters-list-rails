@@ -1,0 +1,42 @@
+<% if user_signed_in? %>
+  <table class="table table-striped table-bordered table-hover">
+  <thead class="table-dark">
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Style</th>
+        <th>Rank</th>
+        <th>Start date</th>
+        <th>Last payment</th>
+        <th>Notes</th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @fighters.each do |fighter| %>
+        <% if fighter.user == current_user %>
+        <tr>
+          <td><%= link_to fighter.first_name + ' ' + fighter.last_name, fighter, class:"link-secondary" %> </td>
+          <td><%= fighter.phone %></td>
+          <td><%= fighter.style %></td>
+          <td><%= fighter.rank %></td>
+          <td><%= fighter.start_date %></td>
+          <td><%= fighter.last_payment %></td>
+          <td><%= fighter.notes %></td>
+          <td><%= link_to 'Destroy', fighter, method: :delete, data: { confirm: 'Are you sure?' },  type:"button", class:"btn btn-outline-danger btn-sm" %></td>
+        </tr>
+      <% end %>
+      <% end %>
+    </tbody>
+  </table>
+
+  <br>
+
+  <%= link_to 'New Fighter', new_fighter_path, class:"btn btn-secondary" %>
+<% else %>
+  <h1>Welcome to my fighter & athlete database! </h1>
+  This project made by Ruby on Rails!
+  <br>
+  To discover how it works and use it for your GYM, Sign Up and start adding your athletes to track their status.
+<% end %>
