@@ -1,24 +1,8 @@
-# README
+# Ruby on Rails Fighters List App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hi, my name is Omer. This is my fighters app for my muay-thai coach & my portfolio :) 
 
-Things you may want to cover:
+Feel free to use it for yourself. 
 
-* Ruby version
+Live app: https://protected-earth-14856.herokuapp.com/
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
