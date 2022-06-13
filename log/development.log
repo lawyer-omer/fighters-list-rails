@@ -15900,3 +15900,76 @@ Processing by FightersController#index as HTML
 Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.6ms | Allocations: 7733)
 
 
+Started GET "/" for 127.0.0.1 at 2022-06-13 17:30:04 +0300
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FightersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fighters/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/fighters/index.html.erb:1
+  [1m[36mFighter Load (0.7ms)[0m  [1m[34mSELECT "fighters".* FROM "fighters"[0m
+  ↳ app/views/fighters/index.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/fighters/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/fighters/index.html.erb:18
+  Rendered fighters/index.html.erb within layouts/application (Duration: 68.5ms | Allocations: 16866)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 1.7ms | Allocations: 650)
+  Rendered layout layouts/application.html.erb (Duration: 125.9ms | Allocations: 24157)
+Completed 200 OK in 150ms (Views: 128.5ms | ActiveRecord: 3.6ms | Allocations: 29089)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-13 17:30:05 +0300
+Processing by FightersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fighters/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/fighters/index.html.erb:1
+  [1m[36mFighter Load (0.2ms)[0m  [1m[34mSELECT "fighters".* FROM "fighters"[0m
+  ↳ app/views/fighters/index.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/fighters/index.html.erb:18
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/fighters/index.html.erb:18
+  Rendered fighters/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 3330)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.4ms | Allocations: 286)
+  Rendered layout layouts/application.html.erb (Duration: 18.9ms | Allocations: 7263)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.7ms | Allocations: 7753)
+
+
+Started GET "/home/about" for 127.0.0.1 at 2022-06-13 17:30:07 +0300
+Processing by HomeController#about as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/about.html.erb within layouts/application
+  Rendered home/about.html.erb within layouts/application (Duration: 1.0ms | Allocations: 111)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_header.html.erb:13
+  Rendered home/_header.html.erb (Duration: 3.1ms | Allocations: 1237)
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 5057)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.2ms | Allocations: 6314)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2022-06-13 17:30:07 +0300
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 15ms (ActiveRecord: 0.1ms | Allocations: 4290)
+
+
+Started GET "/" for 127.0.0.1 at 2022-06-13 17:30:07 +0300
+Processing by FightersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering fighters/index.html.erb within layouts/application
+  Rendered fighters/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 169)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered home/_header.html.erb (Duration: 0.8ms | Allocations: 235)
+  Rendered layouts/_alerts.html.erb (Duration: 0.9ms | Allocations: 132)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 4373)
+Completed 200 OK in 12ms (Views: 11.3ms | ActiveRecord: 0.0ms | Allocations: 4849)
+
+
