@@ -11,20 +11,20 @@
       </div>
     
       <div class="field form-group">
-        <%= f.label :password %>
+        <%= f.label "Şifre" %>
         <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
+        <em>(En az 6 karakter)</em>
         <% end %><br />
         <%= f.password_field :password, autocomplete: "new-password", class:"form-control", placeholder:"********" %>
       </div>
     
       <div class="field form-group">
-        <%= f.label :password_confirmation %><br />
+        <%= f.label "Şifreni tekrarla" %><br />
         <%= f.password_field :password_confirmation, autocomplete: "new-password", class:"form-control", placeholder:"********" %>
       </div>
     
       <div class="actions">
-        <%= f.submit "Sign up", class:"btn btn-secondary" %>
+        <%= f.submit "Kayıt ol", class:"btn btn-secondary" %>
       </div>
     <% end %>
   </div>

@@ -1,5 +1,5 @@
 <div style="width: 36rem; margin:0 auto;">
-  <h2>Forgot your password?</h2>
+  <h2>Şifreni mi unuttun?</h2>
 </div>
 
 <div class="card" style="width: 36rem; margin:0 auto;">
@@ -8,12 +8,12 @@
       <%= render "devise/shared/error_messages", resource: resource %>
     
       <div class="field form-group">
-        <%= f.label :email %><br />
+        <%= f.label "Email" %><br />
         <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control", placeholder:"example@gmail.com" %>
       </div>
       <br>
       <div class="actions">
-        <%= f.submit "Send me reset password instructions", class:"btn btn-secondary" %>
+        <%= f.submit "Şifre yenileme talimatı gönder", class:"btn btn-secondary" %>
       </div>
     <% end %>
   </div>

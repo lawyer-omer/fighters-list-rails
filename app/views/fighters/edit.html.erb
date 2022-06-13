@@ -1,7 +1,7 @@
-<h1>Editing Fighter</h1>
+<h1>Sporcuyu Düzenle</h1>
 <%= render 'form', fighter: @fighter %>
 
 <br>
-<%= link_to 'Back', fighters_path, class:"btn btn-dark" %>
+<%= link_to 'Geri', fighters_path, class:"btn btn-dark" %>
 
-<%= link_to 'Destroy', @fighter, method: :delete, data: { confirm: 'Are you sure?' },  type:"button", class:"btn btn-danger" %>
+<%= link_to 'Sil', @fighter, method: :delete, data: { confirm: 'Emin Misin?' },  type:"button", class:"btn btn-danger" %>

@@ -4,24 +4,24 @@
   <div class="card-body">
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
     <div class="field form-group">
-      <%= f.label :email %><br />
+      <%= f.label "E-Mail" %><br />
       <%= f.email_field :email, class:"form-control", placeholder:"example@gmail.com",  autofocus: true, autocomplete: "email" %>
     </div>
   
     <div class="field form-group">
-      <%= f.label :password %><br />
+      <%= f.label "Şifre" %><br />
       <%= f.password_field :password, class:"form-control", placeholder:"********", autocomplete: "current-password" %>
     </div>
   
     <% if devise_mapping.rememberable? %>
       <div class="field form-check">
         <%= f.check_box :remember_me, class:"form-check-input" %>
-        <%= f.label :remember_me, class:"form-check-label" %>
+        <%= f.label "Beni Hatırla", class:"form-check-label" %>
       </div>
     <% end %>
   
     <div class="actions">
-      <%= f.submit "Log in", class:"btn btn-secondary" %>
+      <%= f.submit "Giriş Yap", class:"btn btn-secondary" %>
     </div>
   <% end %>
   </div>
